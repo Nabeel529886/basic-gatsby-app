@@ -26,17 +26,16 @@ jobs:
       with:
         node-version: 14.4.0
 
-    # Runs a set of commands using the runners shell
+    # Runs a set of commands using the runners shel    
+    
+    - name: install surge
+      run: npm install --global surge
+  
     - name: install gatsby
       run: npm install -g gatsby-cli
 
     - name: build gatsby app
       run: gatsby build
-    
-    
-    - name: install surge
-      run: npm install --global surge
-    
     
     - name: deploy to surge
       run: surge public/ my_basic_gastby_site.surge.sh --token ${{ secrets.SURGE_TOKEN }}
