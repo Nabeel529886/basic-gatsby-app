@@ -39,4 +39,4 @@ jobs:
     
     
     - name: deploy to surge
-      run: surge public/ my_basic_gastby_site.surge.sh --token ${{ SURGE_TOKEN }}
+      run: surge public/ my_basic_gastby_site.surge.sh --token ${{ secrets.SURGE_TOKEN }}
